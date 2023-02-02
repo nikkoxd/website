@@ -1,0 +1,27 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<div class="centered">
+			<div class="name fancy-text">nikko</div>
+			<div class="about-me">
+				<div class="line"><div class="fancy-text">software engineering</div> student,</div>
+				<div class="line">studying c++. <div class="fancy-text">he/him</div></div>
+			</div>
+			<div class="links">
+				<a href="links/telegram"><div class="link-div">tg</div></a>
+				<a href="links/discord"><div class="link-div">dc</div></a>
+				<a href="links/twitter"><div class="link-div">twt</div></a>
+			</div>
+		</div>
+	</body>
+</html>

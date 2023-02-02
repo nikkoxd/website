@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Pacifico&display=swap');
+
+:root {
+	/* Fonts */
+	--title-font: 'Pacifico', cursive;
+	--regular-font: 'Itim', cursive;
+	/* Sizes */
+	--title-size: 4em;
+	--text-size: 1.25em;
+	/* Colors */
+	--background-color: #1f1122;
+	--text-color: #ffffff;
+	--link-color: #ffffff;
+	--link-hover: #1f1122;
+	--gradient: linear-gradient(90deg, var(--gradient-start), var(--gradient-end), var(--gradient-start)) 0 0 / var(--gradient-bg-size) 100%;
+	--gradient-bg-size: 500%;
+	--gradient-start: #ec008c;
+	--gradient-end: #fc6767;
+}
+@keyframes move-bg {
+	to {
+		background-position: var(--gradient-bg-size) 0;
+	}
+}
+
+body {
+	color: var(--text-color);
+	background-color: var(--background-color);
+	font-family: var(--regular-font);
+	font-size: var(--text-size);
+	margin: 0;
+	padding: 0;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.centered {
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.fancy-text {
+	display: inline;
+	background: var(--gradient);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	animation: move-bg 12s infinite linear;
+}
+
+.link-div {
+	display: inline;
+	padding: 1px .25em;
+	border-radius: .25em;
+	background: var(--background-color);
+	color: var(--link-color);
+	transition: .25s background, .15s color;
+}
+
+.link-div:hover {
+	background: var(--gradient);
+	animation: move-bg 12s infinite linear;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover .link-div{
+	color: var(--link-hover);
+}
+
+.name {
+	font-family: var(--title-font);
+	font-size: var(--title-size);
+}
+
+.links {
+	margin-top: 1em;
+}
