@@ -8,15 +8,25 @@
 	--title-size: 4em;
 	--text-size: 1.25em;
 	/* Colors */
-	--background-color: #1f1122;
-	--text-color: #ffffff;
-	--link-color: #ffffff;
-	--link-hover: #1f1122;
+	--background-color: #ffffff;
+	--text-color: #1f1122;
+	--link-color: #1f1122;
+	--link-hover: #ffffff;
 	--gradient: linear-gradient(90deg, var(--gradient-start), var(--gradient-end), var(--gradient-start)) 0 0 / var(--gradient-bg-size) 100%;
 	--gradient-bg-size: 500%;
 	--gradient-start: #ec008c;
 	--gradient-end: #fc6767;
 }
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: #1f1122;
+		--text-color: #ffffff;
+		--link-color: #ffffff;
+		--link-hover: #1f1122;
+	}
+}
+
 @keyframes move-bg {
 	to {
 		background-position: var(--gradient-bg-size) 0;
