@@ -1,8 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout title="nikkoxd">
-	<main>
-	</main>
+  <main
+    class="bg-noise flex h-screen items-center justify-center bg-purple-800 text-white"
+  >
+    <div>
+      <h1 class="text-center text-5xl font-bold text-yellow-300">nikko</h1>
+      <nav
+        class="ml-auto mr-auto mt-5 table w-1/2 table-fixed border-collapse text-center"
+      >
+        <a class="table-cell" href="#">My skills</a>
+        <Button class="table-cell" href="#"> Contact me! </Button>
+        <a class="table-cell" href="#">123</a>
+      </nav>
+    </div>
+  </main>
 </Layout>
