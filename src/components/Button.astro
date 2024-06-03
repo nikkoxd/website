@@ -1,7 +1,26 @@
 ---
-const { href } = Astro.props;
+interface Props {
+  href: string;
+  style?: "primary" | "link";
+}
+
+const { href, style } = Astro.props;
 ---
 
-<a href={href} class="rounded-xl bg-yellow-300 p-2 font-medium text-black">
-  <slot />
-</a>
+{
+  style == "primary" || style == null ? (
+    <a
+      href={href}
+      class="inline-flex items-center gap-2 rounded-xl bg-yellow-300 px-4 py-2 font-medium text-black shadow-xl transition-all hover:-translate-y-1"
+    >
+      <slot> Button </slot>
+    </a>
+  ) : (
+    <a
+      href={href}
+      class="inline-flex items-center gap-2 rounded-xl bg-transparent px-4 py-2 font-medium transition-all hover:-translate-y-1 hover:bg-white hover:text-black hover:shadow-xl"
+    >
+      <slot> Button </slot>
+    </a>
+  )
+}
