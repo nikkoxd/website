@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        noise: "url(noise.png)",
+        noise: "url(/noise.png)",
       },
       fontFamily: {
         mplus: "'M PLUS Rounded 1c', system, sans-serif",
